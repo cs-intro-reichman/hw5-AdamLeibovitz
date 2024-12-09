@@ -107,11 +107,11 @@ public class Scrabble {
 			if (input.equals(".")) {
 				break;
 			}
-			if (isWordInDictionary(input) == false) {
-				System.out.println("No such word in the dictionary. Try again.");
-			}
-			else if (MyString.subsetOf(input,hand) == false){
+			if (MyString.subsetOf(input,hand) == false){
 				System.out.println("Invalid word. Try again.");
+			}
+			else if (isWordInDictionary(input) == false) {
+				System.out.println("No such word in the dictionary. Try again.");
 			}
 			else {
 				score += wordScore(input);
@@ -184,8 +184,8 @@ public class Scrabble {
 	}
 	public static void testPlayHands() {
 		init();
-		playHand("ocostrza");
-		playHand("arbffip");
-		playHand("aretiin");
+		//playHand("ocostrza");
+		//playHand("arbffip");
+		//playHand("aretiin");
 	}
 }
