@@ -66,12 +66,9 @@ public class Scrabble {
 		for (int j = 0; j < word.length(); j++) { // Score Loop
 			points += pointsIndex[alphabet.indexOf(word.charAt(j))];
 		}
-		for (int i = 0; i < word.length(); i++) { // RUNI Bonus
-			if (word.charAt(i) == 'r' && word.length() > i+3) {
-				if (word.charAt(i+1) == 'u' && word.charAt(i+2) == 'n' && word.charAt(i+3) == 'i') {
-					points += 1000;
-				}
-			}
+		points = points*word.length();
+		if (MyString.subsetOf("runi",word)) { // RUNI Bonus
+			points += 1000;
 		}
 		if (word.length() == HAND_SIZE) { // Whole Hand Bonus
 			points += 50;
